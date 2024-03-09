@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Send mail</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Send HTML form to Email</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="wrapper__container">
+                  <form
+        method="post"
+        action="sendmail/sendmail.php"
+        enctype="multipart/form-data"
+        class="form"
+      >
+        <input type="text" placeholder="Name" name="name" class="form__input" />
+        <input
+          placeholder="E-mail"
+          type="email"
+          name="email"
+          class="form__input"
+        />
+      </form>
+
+        </div>
+    </div>
     <script src="style.js"></script>
-</body>
+  </body>
 </html>
