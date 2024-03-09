@@ -8,23 +8,60 @@
   </head>
   <body>
     <div class="wrapper">
-        <div class="wrapper__container">
-                  <form
-        method="post"
-        action="sendmail/sendmail.php"
-        enctype="multipart/form-data"
-        class="form"
-      >
-        <input type="text" placeholder="Name" name="name" class="form__input" />
-        <input
-          placeholder="E-mail"
-          type="email"
-          name="email"
+      <div class="wrapper__container">
+        <form
+          method="post"
+          action="sendmail/sendmail.php"
+          enctype="multipart/form-data"
+          class="form"
+        >
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            class="form__input"
+          />
+          <input
+            placeholder="E-mail"
+            type="email"
+            name="email"
+            class="form__input"
+          />
+          <div class="form__options options-form">
+            <h4 class="options-form__title">Do you Like Code Only?</h4>
+            <label class="options-form__item">
+              <input
+                checked
+                name="like"
+                value="Yes!"
+                type="radio"
+                class="options-form__input"
+              />
+              <span class="options-form__text">Yes!</span>
+            </label>
+            <label class="options-form__item">
+              <input
+                checked
+                name="like"
+                value="Yes of course!"
+                type="radio"
+                class="options-form__input"
+              />
+              <span class="options-form__text">Yes of course!</span>
+            </label>
+          </div>
+        </form>
+        <textarea
+          placeholder="Message"
+          name="message"
           class="form__input"
-        />
-      </form>
-
+        ></textarea>
+        <div class="form__file file-form">
+          <label class="file-form__item">
+            <input type="file" accept=".jpg,.png" class="file-from__input" />
+          </label>
         </div>
+      </div>
     </div>
     <script src="style.js"></script>
   </body>
